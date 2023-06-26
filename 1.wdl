@@ -1,8 +1,8 @@
-task readPasswd {
+workflow test{
   command {
-    cat /etc/passwd
+    String s = "/etc/passwd"
   }
   output {
-    String passwd = read_string(stdout())
+    String passwd = read_string(s)
   }
 }
